@@ -1,11 +1,11 @@
-# PC Cleaner
+# Bismark PC Cleaner
 
 A simple Windows utility that cleans junk files, updates device drivers, and updates your installed software — all in one easy app.
 
 ## Download
 
-Get the installer from the [Releases page](../../releases): **PC-Cleaner-Setup.exe**.
-Run it, follow the wizard, then launch **PC Cleaner** from the Start Menu.
+Get the installer from the [Releases page](../../releases): **Bismark-PC-Cleaner-Setup.exe**.
+Run it, follow the wizard, then launch **Bismark PC Cleaner** from the Start Menu.
 (The app asks for administrator rights because cleaning system folders and installing drivers needs them.)
 
 ## Features
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 pyinstaller pc_cleaner.spec --noconfirm
 ```
 
-The app is in `dist\PC Cleaner\`. To build the installer, install
+The app is in `dist\Bismark PC Cleaner\`. To build the installer, install
 [Inno Setup 6](https://jrsoftware.org/isinfo.php) and run:
 
 ```bat
@@ -41,5 +41,5 @@ The app is in `dist\PC Cleaner\`. To build the installer, install
 
 Pushing a tag like `v1.0.0` triggers the GitHub Actions workflow
 (`.github/workflows/build.yml`), which builds the app with PyInstaller,
-packages `PC-Cleaner-Setup.exe` with Inno Setup, and attaches it to a
+packages `Bismark-PC-Cleaner-Setup.exe` with Inno Setup, and attaches it to a
 GitHub Release automatically.
