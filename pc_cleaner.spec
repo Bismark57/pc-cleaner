@@ -1,5 +1,5 @@
 # -*- mode: python ; coding: utf-8 -*-
-"""PyInstaller build spec for PC Cleaner (Windows, one-dir)."""
+"""PyInstaller build spec for Bismark PC Cleaner (Windows, one-dir)."""
 
 block_cipher = None
 
@@ -26,7 +26,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name="PC Cleaner",
+    name="Bismark PC Cleaner",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -48,5 +48,5 @@ coll = COLLECT(
     strip=False,
     upx=False,
     upx_exclude=[],
-    name="PC Cleaner",
+    name="Bismark PC Cleaner",
 )
