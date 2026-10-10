@@ -1,0 +1,6 @@
+# Runtime dependencies
+customtkinter>=5.2.0
+psutil>=5.9.0
+
+# Build-only (installed in CI before PyInstaller runs)
+pyinstaller>=6.0
