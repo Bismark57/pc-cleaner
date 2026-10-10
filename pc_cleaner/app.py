@@ -1,4 +1,4 @@
-"""PC Cleaner main window."""
+"""Bismark PC Cleaner main window."""
 
 import datetime
 import sys
@@ -20,7 +20,7 @@ class PCCleanerApp(ctk.CTk):
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("blue")
 
-        self.title("PC Cleaner v%s" % __version__)
+        self.title("Bismark PC Cleaner v%s" % __version__)
         self.geometry("860x720")
         self.minsize(780, 640)
 
@@ -76,7 +76,7 @@ class PCCleanerApp(ctk.CTk):
                                   command=self._clear_log)
         clear_btn.grid(row=0, column=1, padx=(0, 8), pady=8)
 
-        self.log("PC Cleaner v%s started." % __version__)
+        self.log("Bismark PC Cleaner v%s started." % __version__)
         if is_windows() and not is_admin():
             self.log("Running without administrator rights.")
 
@@ -112,7 +112,7 @@ def main():
     if not is_windows():
         # Allow import-time checks on other platforms, but the app itself
         # only makes sense on Windows.
-        print("PC Cleaner is a Windows application.", file=sys.stderr)
+        print("Bismark PC Cleaner is a Windows application.", file=sys.stderr)
         return 1
     app = PCCleanerApp()
     app.mainloop()
