@@ -266,7 +266,7 @@ class DriversTab(ctk.CTkFrame):
             messagebox.showwarning(
                 "Administrator needed",
                 "Installing driver updates needs administrator rights.\n"
-                "Please restart PC Cleaner as administrator.")
+                "Please restart Bismark PC Cleaner as administrator.")
             return
         if not messagebox.askyesno(
                 "Install driver updates?",
