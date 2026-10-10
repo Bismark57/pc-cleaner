@@ -40,4 +40,4 @@ Name: "{autodesktop}\PC Cleaner"; Filename: "{app}\PC Cleaner.exe"; Tasks: deskt
 Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription: "Additional shortcuts:"
 
 [Run]
-Filename: "{app}\PC Cleaner.exe"; Description: "Launch PC Cleaner"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\PC Cleaner.exe"; Description: "Launch PC Cleaner"; Flags: nowait postinstall skipifsilent shellexec
