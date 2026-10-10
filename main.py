@@ -1,4 +1,4 @@
-"""PC Cleaner entry point (used by PyInstaller)."""
+"""Bismark PC Cleaner entry point (used by PyInstaller)."""
 
 import sys
 
