@@ -33,10 +33,10 @@ jobs:
       - name: Verify build output
         shell: pwsh
         run: |
-          if (-not (Test-Path "dist\PC Cleaner\PC Cleaner.exe")) {
-            throw "Build failed: dist\PC Cleaner\PC Cleaner.exe not found"
+          if (-not (Test-Path "dist\Bismark PC Cleaner\Bismark PC Cleaner.exe")) {
+            throw "Build failed: dist\Bismark PC Cleaner\Bismark PC Cleaner.exe not found"
           }
-          Get-ChildItem "dist\PC Cleaner" | Select-Object Name, Length
+          Get-ChildItem "dist\Bismark PC Cleaner" | Select-Object Name, Length
 
       - name: Install Inno Setup
         run: choco install innosetup -y --no-progress
@@ -49,16 +49,16 @@ jobs:
           if ([string]::IsNullOrWhiteSpace($ver)) { $ver = "1.0.0" }
           Write-Output "Building installer version $ver"
           & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" "/DAppVersion=$ver" "installer\setup.iss"
-          Get-ChildItem "installer-output\PC-Cleaner-Setup.exe" | Select-Object Name, Length
+          Get-ChildItem "installer-output\Bismark-PC-Cleaner-Setup.exe" | Select-Object Name, Length
 
       - name: Upload installer artifact
         uses: actions/upload-artifact@v4
         with:
-          name: PC-Cleaner-Setup
-          path: installer-output/PC-Cleaner-Setup.exe
+          name: Bismark-PC-Cleaner-Setup
+          path: installer-output/Bismark-PC-Cleaner-Setup.exe
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: installer-output/PC-Cleaner-Setup.exe
+          files: installer-output/Bismark-PC-Cleaner-Setup.exe
           generate_release_notes: true
